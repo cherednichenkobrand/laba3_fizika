@@ -1,0 +1,9 @@
+build/
+/bench
+/physics2d
+*.o
+bin/
+vs/
+.vs/
+*.vcxproj.user
+results/

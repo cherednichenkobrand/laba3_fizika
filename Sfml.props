@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Путь к SFML. По умолчанию: Рабочий стол\SFML-2.6.2 (две папки вверх от проекта).
+     Если SFML лежит в другом месте — поменяй SfmlDir здесь (с \ на конце). -->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SfmlDir Condition="'$(SfmlDir)'==''">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\SFML-2.6.2\'))</SfmlDir>
+    <SfmlSuffix Condition="'$(Configuration)'=='Debug'">-d</SfmlSuffix>
+    <SfmlSuffix Condition="'$(Configuration)'!='Debug'"></SfmlSuffix>
+  </PropertyGroup>
+</Project>
